@@ -1,0 +1,150 @@
+/* General page setup */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #74ebd5, #ACB6E5, #ff9a9e, #fad0c4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+/* Page container */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    color: #2f3640;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#chatbox {
+    background-color: white;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat messages */
+#messages {
+    height: 350px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f7f9fc;
+    display: flex;
+    flex-direction: column;  
+}
+
+/* Each message */
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 5px 0;
+    max-width: 80%;
+}
+
+.bot {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+}
+
+.user {
+    background-color: #4CAF50;
+    color: white;
+    align-self: flex-end;
+}
+
+
+/* Bot messages */
+.message.bot {
+    background-color: #dce6f0;
+    align-self: flex-start;
+    color: #1f4e79;
+}
+
+/* User messages */
+.message.user {
+    background-color: #1f4e79;
+    color: #ffffff;
+    align-self: flex-end;
+}
+
+/* Input area */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Input field */
+#userInput {
+    width: calc(100% - 80px);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+/* Menu options (clickable buttons) */
+.menu-option {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background-color: #e1ebf7;
+    color: #1f4e79;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s ease;
+}
+
+.menu-option:hover {
+    background-color: #c7d8f2;
+}
+
+/* Scrollbar styling */
+#messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #a0b8d8;
+    border-radius: 3px;
+}
