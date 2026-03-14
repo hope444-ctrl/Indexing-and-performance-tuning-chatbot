@@ -39,12 +39,14 @@ def chat():
     # Ask for name first
     if user_name == "":
         user_name = user_message
-        reply = f"👋 Nice to meet you, {user_name}! 🤖<br>" \
-                "📚 What would you like to learn today?<br>" \
-                "1️⃣ What is Indexing<br>" \
-                "2️⃣ Types of Indexes<br>" \
-                "3️⃣ Performance Tuning<br>" \
-                "4️⃣ SQL Index Commands"
+        reply = (
+         f"👋 Nice to meet you, {user_name}! 🤖<br>"
+         "📚 What would you like to learn today?<br>"
+         "1️⃣ What is Indexing<br>"
+         "2️⃣ Types of Indexes<br>"
+         "3️⃣ Performance Tuning<br>"
+         "4️⃣ SQL Index Commands"
+        )
         return jsonify({"reply": reply})
 
     reply = chatbot_response(user_message, user_name)
