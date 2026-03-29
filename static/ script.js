@@ -32,3 +32,8 @@ function sendMessage() {
         messages.innerHTML += "<p class='message bot'>😅 Something went wrong!</p>";
     });
 }
+
+document.getElementById("chatForm").addEventListener("submit", function(e) {
+    e.preventDefault();  // stops page reload
+    sendMessage();
+});
